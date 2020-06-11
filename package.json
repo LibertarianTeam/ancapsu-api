@@ -10,6 +10,11 @@
     "dev": "nodemon .",
     "lint": "eslint --ext .js --ignore-path .gitignore . --fix"
   },
+  "dependencies": {
+    "apollo-server": "^2.14.3",
+    "graphql": "^15.1.0",
+    "merge-graphql-schemas": "^1.7.8"
+  },
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
