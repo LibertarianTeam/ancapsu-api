@@ -1,0 +1,7 @@
+type Video {
+  title: String!
+}
+
+type Query {
+  videoList: [Video!]!
+}
