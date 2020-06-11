@@ -1,0 +1,12 @@
+{
+  "name": "ancapsu-api",
+  "version": "1.0.0",
+  "description": "API Ancapsu",
+  "main": "./src/server.js",
+  "repository": "https://github.com/LibertarianTeam/ancapsu-api",
+  "author": "paulloclara <paulloclara@gmail.com>",
+  "scripts": {
+    "start": "node ."
+  },
+  "license": "MIT"
+}
