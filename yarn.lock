@@ -792,6 +792,11 @@ camel-case@4.1.1:
     pascal-case "^3.1.1"
     tslib "^1.10.0"
 
+camelcase-object-deep@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/camelcase-object-deep/-/camelcase-object-deep-1.1.2.tgz#77c76b747757875444ea623b1b428ec6daff9a62"
+  integrity sha512-p35hR77QcNakKLM/zdGuWP7OnpEgxCKdtlP5CytGs+skB7E3+szcRGnOo0vXQwHloAyb0Uy/DogbUeawueWNAQ==
+
 camelcase@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"

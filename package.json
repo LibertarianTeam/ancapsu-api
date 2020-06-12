@@ -13,6 +13,7 @@
   "dependencies": {
     "apollo-server": "^2.14.3",
     "axios": "^0.19.2",
+    "camelcase-object-deep": "^1.1.2",
     "dotenv": "^8.2.0",
     "graphql": "^15.1.0",
     "merge-graphql-schemas": "^1.7.8"
