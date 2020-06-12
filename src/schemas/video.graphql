@@ -1,7 +1,15 @@
 type Video {
+  id: String!
   title: String!
+  youtubeLink: String!
+  description: String!
+  categories: [Category]!
+  authors: Authors!
+  status: String!
 }
 
 type Query {
-  videoList: [Video!]!
+  videoList(ini: Int, max: Int): [Video!]!
+  videoCategory(categ: String!, ini: Int, max: Int): [Video!]!
+  videoSearch(search: String!, ini: Int, max: Int): [Video!]!
 }

@@ -1,0 +1,19 @@
+type Category {
+  name: String
+  label: String
+}
+
+type Collaborator {
+  id: ID
+  name: String
+}
+
+type Authors {
+  suggested: Collaborator!
+  authored: Collaborator!
+  revised: Collaborator!
+  narrated: Collaborator!
+  produced: Collaborator!
+  date: String!
+  status: String!
+}
