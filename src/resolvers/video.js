@@ -1,10 +1,14 @@
 const visaoLibertaria = require('../services/visao-libertaria');
+const { VISAO_LIBERTARIA_API } = process.env;
 
 function handleVideoResponse(videos) {
   return videos.map((video) => {
     video.status = video.statusName;
-    video.categories = video.categories.categories;
     video.authors.status = video.authors.statusText;
+    video.category = video.categories.mainCategory;
+    video.category.name = video.category.label;
+    video.category.label = video.category.category;
+    video.image = `${VISAO_LIBERTARIA_API}/Video/Image?id=${video.id}`;
 
     return video;
   });

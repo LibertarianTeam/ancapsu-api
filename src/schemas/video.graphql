@@ -1,9 +1,11 @@
 type Video {
   id: String!
   title: String!
+  image: String!
   youtubeLink: String!
+  bitchuteLink: String!
   description: String!
-  categories: [Category]!
+  category: Category!
   authors: Authors!
   status: String!
 }
