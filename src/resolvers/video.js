@@ -20,27 +20,30 @@ function handleVideoResponse(videos) {
 
 module.exports = {
   queries: {
-    async videoList(_, { ini = 0, max = 12 }) {
+    async videoList(_, { ini = 0, max = 12 }, { response }) {
       const options = { type, ini, max };
-      const response = await visaoLibertaria.list(options);
+      const responseData = await visaoLibertaria.list(options);
 
-      const videos = handleVideoResponse(response.videos);
+      response.header('X-Total-Count', responseData.total);
+      const videos = handleVideoResponse(responseData.videos);
 
       return videos;
     },
-    async videoCategory(_, { categ, ini = 0, max = 12 }) {
+    async videoCategory(_, { categ, ini = 0, max = 12 }, { response }) {
       const options = { type, categ, ini, max };
-      const response = await visaoLibertaria.category(options);
+      const responseData = await visaoLibertaria.category(options);
 
-      const videos = handleVideoResponse(response.videos);
+      response.header('X-Total-Count', responseData.total);
+      const videos = handleVideoResponse(responseData.videos);
 
       return videos;
     },
-    async videoSearch(_, { search, ini = 0, max = 12 }) {
+    async videoSearch(_, { search, ini = 0, max = 12 }, { response }) {
       const options = { type, search, ini, max };
-      const response = await visaoLibertaria.search(options);
+      const responseData = await visaoLibertaria.search(options);
 
-      const videos = handleVideoResponse(response.videos);
+      response.header('X-Total-Count', responseData.total);
+      const videos = handleVideoResponse(responseData.videos);
 
       return videos;
     },
