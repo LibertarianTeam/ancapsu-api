@@ -10,26 +10,24 @@ function buildQuery(options) {
 }
 
 module.exports = {
-  video: {
-    async list({ ini = 0, max = 12 } = {}) {
-      const query = buildQuery({ ini, max });
-      const responseData = (await axios.get(`/Video/List?${query}`)).data;
+  async list({ type, ini = 0, max = 12 } = {}) {
+    const query = buildQuery({ ini, max });
+    const responseData = (await axios.get(`/${type}/list?${query}`)).data;
 
-      return camelcaseObjectDeep(responseData);
-    },
-    async category({ categ = 'news', ini = 0, max = 10 } = {}) {
-      const query = buildQuery({ categ, ini, max });
-      const responseData = (await axios.get(`/Video/ByCategory?${query}`)).data;
+    return camelcaseObjectDeep(responseData);
+  },
+  async category({ type, categ = 'news', ini = 0, max = 10 } = {}) {
+    const query = buildQuery({ categ, ini, max });
+    const responseData = (await axios.get(`/${type}/bycategory?${query}`)).data;
 
-      return camelcaseObjectDeep(responseData);
-    },
-    async search({ search = '', ini = 0, max = 10 } = {}) {
-      const query = buildQuery({ ini, max });
-      const body = { SearchString: search };
-      const responseData = (await axios.post(`/Video/Search?${query}`, body))
-        .data;
+    return camelcaseObjectDeep(responseData);
+  },
+  async search({ type, search = '', ini = 0, max = 10 } = {}) {
+    const query = buildQuery({ ini, max });
+    const body = { SearchString: search };
+    const responseData = (await axios.post(`/${type}/search?${query}`, body))
+      .data;
 
-      return camelcaseObjectDeep(responseData);
-    },
+    return camelcaseObjectDeep(responseData);
   },
 };
