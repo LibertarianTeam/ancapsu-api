@@ -76,7 +76,7 @@ https://api-ancapsu.herokuapp.com
   {
     "id": "67298de2-e483-45d5-8012-699f2a70c350",
     "title": "Facebook bane grupo de extrema-direita que defende fim do governo",
-    "image": "https://www.visaolibertaria.com/api/video/image?id=67298de2-e483-45d5-8012-699f2a70c350",
+    "image": "https://libvw.com/api/video/image?id=67298de2-e483-45d5-8012-699f2a70c350",
     "youtubeLink": "https://youtu.be/EZvqS4_Stj0",
     "bitchuteLink": "",
     "description": "",
@@ -290,7 +290,7 @@ https://api-ancapsu.herokuapp.com
   {
     "id": "8b7c1aee-3320-41ea-86d3-835d6f76f34c",
     "title": "(Mais uma) Jornalista que denunciou o epicentro do vírus do PCC é presa",
-    "image": "https://www.visaolibertaria.com/api/article/image?id=8b7c1aee-3320-41ea-86d3-835d6f76f34c",
+    "image": "https://libvw.com/api/article/image?id=8b7c1aee-3320-41ea-86d3-835d6f76f34c",
     "description": "Não é nada novo para o mundo que a China é um ambiente hostil para a imprensa, competindo com outros países como Eritreia, Turcomenistão e Coreia do Norte pelo título de ambiente mais repressivo para a imprensa. O histórico chinês de ataque a jornalistas, sobretudo desde os protestos em favor de Hon",
     "category": [
       {

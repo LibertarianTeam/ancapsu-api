@@ -1,1 +1,289 @@
-{"_type":"export","__export_format":4,"__export_date":"2020-07-04T01:10:30.030Z","__export_source":"insomnia.desktop.app:v2020.2.2","resources":[{"_id":"req_af33d60757ba48fa8e9e25e91bfb5024","authentication":{},"body":{"mimeType":"application/graphql","text":"{\"query\":\"query {\\n  videoList {\\n    id\\n    title\\n    image\\n    youtubeLink\\n    bitchuteLink\\n    description\\n    category {\\n      name\\n      label\\n    }\\n    authors {\\n      suggested {id name}\\n      authored {id name}\\n      revised {id name}\\n      narrated {id name}\\n      produced {id name}\\n      date\\n      status\\n    }\\n    status\\n  }\\n}\"}"},"created":1591897844913,"description":"","headers":[{"id":"pair_740ac867b9114b838da989427182ab2c","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591897844913,"method":"POST","modified":1593824964956,"name":"List","parameters":[],"parentId":"fld_46f8a9aed2aa42ee9b452fc90d2ea52f","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ baseURL  }}","_type":"request"},{"_id":"fld_46f8a9aed2aa42ee9b452fc90d2ea52f","created":1591897838732,"description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1591897838732,"modified":1591897838732,"name":"Video","parentId":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","_type":"request_group"},{"_id":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","created":1591897826519,"description":"","modified":1591897826519,"name":"Ancapsu","parentId":null,"scope":null,"_type":"workspace"},{"_id":"req_7c34cf4a038841c99e9496544ba276ab","authentication":{},"body":{"mimeType":"application/graphql","text":"{\"query\":\"query {\\n  videoCategory(categ: \\\"theory\\\") {\\n    id\\n    title\\n  }\\n}\"}"},"created":1591981336452,"description":"","headers":[{"id":"pair_aca8127877814f7e9b04abef661de9a3","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591897844863,"method":"POST","modified":1593811220151,"name":"Category","parameters":[],"parentId":"fld_46f8a9aed2aa42ee9b452fc90d2ea52f","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ baseURL  }}","_type":"request"},{"_id":"req_f74c9717302547f7be8068472f2027fe","authentication":{},"body":{"mimeType":"application/graphql","text":"{\"query\":\"query {\\n  videoSearch(search: \\\"teste\\\") {\\n    id\\n    title\\n  }\\n}\"}"},"created":1591981430023,"description":"","headers":[{"id":"pair_5fd264487cef4ff3a74edfb2f767e4c5","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591897844813,"method":"POST","modified":1593811524200,"name":"Search","parameters":[],"parentId":"fld_46f8a9aed2aa42ee9b452fc90d2ea52f","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ baseURL  }}","_type":"request"},{"_id":"req_087b196af0384879b0cff0ba44990895","authentication":{},"body":{"mimeType":"application/graphql","text":"{\"query\":\"query {\\n  articleList(max: 1) {\\n    id\\n    title\\n    image\\n    description\\n    category {\\n      name\\n      label\\n    }\\n    authors {\\n      suggested {id name}\\n      authored {id name}\\n      revised {id name}\\n      narrated {id name}\\n      produced {id name}\\n      date\\n      status\\n    }\\n    status\\n  }\\n}\"}"},"created":1593809595584,"description":"","headers":[{"id":"pair_740ac867b9114b838da989427182ab2c","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591897844913,"method":"POST","modified":1593811885689,"name":"List","parameters":[],"parentId":"fld_07cced4be94b4dd49d1712584f457e4f","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ baseURL  }}","_type":"request"},{"_id":"fld_07cced4be94b4dd49d1712584f457e4f","created":1593809595557,"description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1591897838707,"modified":1593809601507,"name":"Article","parentId":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","_type":"request_group"},{"_id":"req_c811616d9354495c90b896feb452c1cf","authentication":{},"body":{"mimeType":"application/graphql","text":"{\"query\":\"query {\\n  articleCategory(categ: \\\"theory\\\") {\\n    id\\n    title\\n  }\\n}\"}"},"created":1593809595630,"description":"","headers":[{"id":"pair_aca8127877814f7e9b04abef661de9a3","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591897844863,"method":"POST","modified":1593811855600,"name":"Category","parameters":[],"parentId":"fld_07cced4be94b4dd49d1712584f457e4f","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ baseURL  }}","_type":"request"},{"_id":"req_381f99162b75432cb41229e94feb1ebf","authentication":{},"body":{"mimeType":"application/graphql","text":"{\"query\":\"query {\\n  articleSearch(search: \\\"Argentina\\\") {\\n    id\\n    title\\n  }\\n}\"}"},"created":1593809595636,"description":"","headers":[{"id":"pair_5fd264487cef4ff3a74edfb2f767e4c5","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591897844813,"method":"POST","modified":1593811526596,"name":"Search","parameters":[],"parentId":"fld_07cced4be94b4dd49d1712584f457e4f","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ baseURL  }}","_type":"request"},{"_id":"req_f5d8709c87224362915d5870a8300129","authentication":{},"body":{},"created":1593808370924,"description":"","headers":[],"isPrivate":false,"metaSortKey":-1591897838657,"method":"GET","modified":1593811974478,"name":"Origin","parameters":[],"parentId":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"https://www.visaolibertaria.com/api/Video/List?ini=0&max=10","_type":"request"},{"_id":"env_c3fb9a0d727a46f1a6516d6cc59eb7a105d4d8c8","color":null,"created":1591897827077,"data":{"baseURL":"http://localhost:4000"},"dataPropertyOrder":{"&":["baseURL"]},"isPrivate":false,"metaSortKey":1591897827077,"modified":1591897917200,"name":"Base Environment","parentId":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","_type":"environment"},{"_id":"jar_c3fb9a0d727a46f1a6516d6cc59eb7a105d4d8c8","cookies":[],"created":1591897827095,"modified":1591897827095,"name":"Default Jar","parentId":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","_type":"cookie_jar"},{"_id":"spc_ce424d38ffde41aebe1ec2f1cbc7e724","contentType":"yaml","contents":"","created":1591897826537,"fileName":"Ancapsu","modified":1591897826537,"parentId":"wrk_eedb24025f8944e6b29563c2ba1e9bdc","_type":"api_spec"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-07-04T01:10:30.030Z",
+  "__export_source": "insomnia.desktop.app:v2020.2.2",
+  "resources": [
+    {
+      "_id": "req_af33d60757ba48fa8e9e25e91bfb5024",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n  videoList {\\n    id\\n    title\\n    image\\n    youtubeLink\\n    bitchuteLink\\n    description\\n    category {\\n      name\\n      label\\n    }\\n    authors {\\n      suggested {id name}\\n      authored {id name}\\n      revised {id name}\\n      narrated {id name}\\n      produced {id name}\\n      date\\n      status\\n    }\\n    status\\n  }\\n}\"}"
+      },
+      "created": 1591897844913,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_740ac867b9114b838da989427182ab2c",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591897844913,
+      "method": "POST",
+      "modified": 1593824964956,
+      "name": "List",
+      "parameters": [],
+      "parentId": "fld_46f8a9aed2aa42ee9b452fc90d2ea52f",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_46f8a9aed2aa42ee9b452fc90d2ea52f",
+      "created": 1591897838732,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1591897838732,
+      "modified": 1591897838732,
+      "name": "Video",
+      "parentId": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "created": 1591897826519,
+      "description": "",
+      "modified": 1591897826519,
+      "name": "Ancapsu",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_7c34cf4a038841c99e9496544ba276ab",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n  videoCategory(categ: \\\"theory\\\") {\\n    id\\n    title\\n  }\\n}\"}"
+      },
+      "created": 1591981336452,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_aca8127877814f7e9b04abef661de9a3",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591897844863,
+      "method": "POST",
+      "modified": 1593811220151,
+      "name": "Category",
+      "parameters": [],
+      "parentId": "fld_46f8a9aed2aa42ee9b452fc90d2ea52f",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f74c9717302547f7be8068472f2027fe",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n  videoSearch(search: \\\"teste\\\") {\\n    id\\n    title\\n  }\\n}\"}"
+      },
+      "created": 1591981430023,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_5fd264487cef4ff3a74edfb2f767e4c5",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591897844813,
+      "method": "POST",
+      "modified": 1593811524200,
+      "name": "Search",
+      "parameters": [],
+      "parentId": "fld_46f8a9aed2aa42ee9b452fc90d2ea52f",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_087b196af0384879b0cff0ba44990895",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n  articleList(max: 1) {\\n    id\\n    title\\n    image\\n    description\\n    category {\\n      name\\n      label\\n    }\\n    authors {\\n      suggested {id name}\\n      authored {id name}\\n      revised {id name}\\n      narrated {id name}\\n      produced {id name}\\n      date\\n      status\\n    }\\n    status\\n  }\\n}\"}"
+      },
+      "created": 1593809595584,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_740ac867b9114b838da989427182ab2c",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591897844913,
+      "method": "POST",
+      "modified": 1593811885689,
+      "name": "List",
+      "parameters": [],
+      "parentId": "fld_07cced4be94b4dd49d1712584f457e4f",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_07cced4be94b4dd49d1712584f457e4f",
+      "created": 1593809595557,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1591897838707,
+      "modified": 1593809601507,
+      "name": "Article",
+      "parentId": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_c811616d9354495c90b896feb452c1cf",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n  articleCategory(categ: \\\"theory\\\") {\\n    id\\n    title\\n  }\\n}\"}"
+      },
+      "created": 1593809595630,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_aca8127877814f7e9b04abef661de9a3",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591897844863,
+      "method": "POST",
+      "modified": 1593811855600,
+      "name": "Category",
+      "parameters": [],
+      "parentId": "fld_07cced4be94b4dd49d1712584f457e4f",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_381f99162b75432cb41229e94feb1ebf",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query {\\n  articleSearch(search: \\\"Argentina\\\") {\\n    id\\n    title\\n  }\\n}\"}"
+      },
+      "created": 1593809595636,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_5fd264487cef4ff3a74edfb2f767e4c5",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591897844813,
+      "method": "POST",
+      "modified": 1593811526596,
+      "name": "Search",
+      "parameters": [],
+      "parentId": "fld_07cced4be94b4dd49d1712584f457e4f",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ baseURL  }}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f5d8709c87224362915d5870a8300129",
+      "authentication": {},
+      "body": {},
+      "created": 1593808370924,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1591897838657,
+      "method": "GET",
+      "modified": 1593811974478,
+      "name": "Origin",
+      "parameters": [],
+      "parentId": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "https://libvw.com/api/Video/List?ini=0&max=10",
+      "_type": "request"
+    },
+    {
+      "_id": "env_c3fb9a0d727a46f1a6516d6cc59eb7a105d4d8c8",
+      "color": null,
+      "created": 1591897827077,
+      "data": { "baseURL": "http://localhost:4000" },
+      "dataPropertyOrder": { "&": ["baseURL"] },
+      "isPrivate": false,
+      "metaSortKey": 1591897827077,
+      "modified": 1591897917200,
+      "name": "Base Environment",
+      "parentId": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_c3fb9a0d727a46f1a6516d6cc59eb7a105d4d8c8",
+      "cookies": [],
+      "created": 1591897827095,
+      "modified": 1591897827095,
+      "name": "Default Jar",
+      "parentId": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_ce424d38ffde41aebe1ec2f1cbc7e724",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1591897826537,
+      "fileName": "Ancapsu",
+      "modified": 1591897826537,
+      "parentId": "wrk_eedb24025f8944e6b29563c2ba1e9bdc",
+      "_type": "api_spec"
+    }
+  ]
+}
