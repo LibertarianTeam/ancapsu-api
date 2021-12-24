@@ -8,7 +8,7 @@ const type = 'article';
 const { VISAO_LIBERTARIA_API } = process.env;
 
 function handleArticleResponse(articles: any[]): ArticleType[] {
-  return articles.map((article) => {
+  return articles.map(article => {
     article.status = article.statusName;
     article.description = article.startingText;
 

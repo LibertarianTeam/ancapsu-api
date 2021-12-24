@@ -8,11 +8,11 @@ const type = 'video';
 const { VISAO_LIBERTARIA_API } = process.env;
 
 function handleVideoResponse(videos: any[]): VideoType[] {
-  return videos.map((video) => {
+  return videos.map(video => {
     video.status = video.statusName;
     video.authors.status = video.authors.statusText;
 
-    video.category = video.categories.mainCategory;
+    video.category = video.categories?.mainCategory;
     video.category.name = video.category.label;
     video.category.label = video.category.category;
 

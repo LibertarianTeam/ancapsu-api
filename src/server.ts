@@ -10,7 +10,7 @@ async function main() {
     schema,
     introspection: true,
     cors: { origin: '*' },
-    context: (context) => ({ request: context.req, response: context.res }),
+    context: context => ({ request: context.req, response: context.res }),
   });
 
   const { url } = await server.listen({ port: process.env.PORT || 4000 });

@@ -44,10 +44,10 @@ class AuthorType {
 
 @ArgsType()
 class DefaultArgsType {
-  @Field((type) => Int, { defaultValue: 0 })
+  @Field(() => Int, { defaultValue: 0 })
   ini: number;
 
-  @Field((type) => Int, { defaultValue: 12 })
+  @Field(() => Int, { defaultValue: 12 })
   max: number;
 }
 
