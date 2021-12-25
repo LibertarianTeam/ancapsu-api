@@ -35,7 +35,14 @@
     "max-classes-per-file": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "class-methods-use-this": "off",
-    "no-param-reassign": "off"
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "info"
+        ]
+      }
+    ]
   },
   "settings": {
     "import/resolver": {

@@ -9,20 +9,27 @@ const { VISAO_LIBERTARIA_API } = process.env;
 
 function handleArticleResponse(articles: any[]): ArticleType[] {
   return articles.map(article => {
-    article.status = article.statusName;
-    article.description = article.startingText;
+    const lvArticle: ArticleType = { ...article };
 
-    if (!article.authors) article.authors = {};
-    article.authors.status = article.authors.statusText;
+    lvArticle.status = article.statusName;
+    lvArticle.description = article.startingText;
 
-    article.category = article.categories?.categories?.map((category: any) => ({
-      name: category.label,
-      label: category.category,
-    }));
+    if (!lvArticle.authors) lvArticle.authors = {};
+    lvArticle.authors.status = article.authors.statusText || '';
 
-    article.image = `${VISAO_LIBERTARIA_API}/article/image?id=${article.id}`;
+    lvArticle.category = {};
+    lvArticle.category.name = article.categories?.mainCategory?.label || '';
+    lvArticle.category.label = article.categories?.mainCategory?.category || '';
 
-    return article;
+    lvArticle.categories =
+      article.categories?.categories?.map((category: any) => ({
+        name: category.label,
+        label: category.category,
+      })) || [];
+
+    lvArticle.image = `${VISAO_LIBERTARIA_API}/article/image?id=${article.id}`;
+
+    return lvArticle;
   });
 }
 

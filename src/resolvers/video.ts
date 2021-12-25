@@ -9,16 +9,27 @@ const { VISAO_LIBERTARIA_API } = process.env;
 
 function handleVideoResponse(videos: any[]): VideoType[] {
   return videos.map(video => {
-    video.status = video.statusName;
-    video.authors.status = video.authors.statusText;
+    const lvVideo: VideoType = { ...video };
 
-    video.category = video.categories?.mainCategory;
-    video.category.name = video.category.label;
-    video.category.label = video.category.category;
+    lvVideo.status = video.statusName || '';
+    lvVideo.description = video.description || video.startingDescription || '';
 
-    video.image = `${VISAO_LIBERTARIA_API}/video/image?id=${video.id}`;
+    if (!lvVideo.authors) lvVideo.authors = {};
+    lvVideo.authors.status = video.authors.statusText || '';
 
-    return video;
+    lvVideo.category = {};
+    lvVideo.category.name = video.categories?.mainCategory?.label || '';
+    lvVideo.category.label = video.categories?.mainCategory?.category || '';
+
+    lvVideo.categories =
+      video.categories?.categories?.map((category: any) => ({
+        name: category.label || '',
+        label: category.category || '',
+      })) || [];
+
+    lvVideo.image = `${VISAO_LIBERTARIA_API}/video/image?id=${video.id}`;
+
+    return lvVideo;
   });
 }
 

@@ -18,6 +18,9 @@ class ArticleType {
   @Field({ nullable: true })
   category?: CategoryType;
 
+  @Field(() => [CategoryType], { nullable: true })
+  categories?: CategoryType[];
+
   @Field({ nullable: true })
   authors?: AuthorType;
 
