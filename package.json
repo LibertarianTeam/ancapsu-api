@@ -1,6 +1,6 @@
 {
   "name": "ancapsu-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "API Ancapsu",
   "main": "./dist/server.js",
   "repository": "https://github.com/LibertarianTeam/ancapsu-api",
