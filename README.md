@@ -1,12 +1,8 @@
-# **[AncapSU - API](https://api-ancapsu.herokuapp.com)**
+# [AncapSU - API](https://api-ancapsu.herokuapp.com)
 
-> Simplificação da API oficial Visão Libertária.
+> Simplificação da API oficial [Visão Libertária](https://github.com/MiguelMedeiros/visao-libertaria-api-docs).
 
-## **Base URL**
-
-https://api-ancapsu.herokuapp.com
-
-### **Endpoints**
+### Endpoints
 
 - [Vídeos](#tipo-vídeo)
 
@@ -14,15 +10,15 @@ https://api-ancapsu.herokuapp.com
   - [POST - Listar Vídeos por Categoria](#listar-vídeos-por-categoria)
   - [POST - Buscar Vídeos](#buscar-vídeos)
 
-- [Matérias](#tipo-matéria)
+- [Artigos](#tipo-matéria)
 
-  - [POST - Listar Matérias](#listar-matérias)
-  - [POST - Listar Matérias por Categoria](#listar-matérias-por-categoria)
-  - [POST - Buscar Matérias](#buscar-matérias)
+  - [POST - Listar Artigos](#listar-artigos)
+  - [POST - Listar Artigos por Categoria](#listar-artigos-por-categoria)
+  - [POST - Buscar Artigos](#buscar-artigos)
 
 ---
 
-#### **Tipo Vídeo**
+#### Tipo Vídeo
 
 - <details>
     <summary><b>Query:</b></summary>
@@ -114,9 +110,9 @@ https://api-ancapsu.herokuapp.com
 
   </details>
 
-#### **Listar Vídeos**
+#### Listar Vídeos
 
-- **Options:**
+- Options:
 
   - `ini=[integer]` - Inicio da lista de resultados, default=0.
   - `max=[integer]` - Quantidade de videos na lista de resultados, default=12.
@@ -157,9 +153,9 @@ https://api-ancapsu.herokuapp.com
 
   </details>
 
-#### **Listar Vídeos por Categoria**
+#### Listar Vídeos por Categoria
 
-- **Options:**
+- Options:
 
   - `categ=[string]` - "theory", "news", "comic", etc... obrigatório.
   - `ini=[integer]` - Inicio da lista de resultados, default=0.
@@ -201,9 +197,9 @@ https://api-ancapsu.herokuapp.com
 
 </details>
 
-#### **Buscar Vídeos**
+#### Buscar Vídeos
 
-- **Options:**
+- Options:
 
   - `search=[string]` - Conteudo da pesquisa, obrigatório.
   - `ini=[integer]` - Inicio da lista de resultados, default=0.
@@ -238,7 +234,7 @@ https://api-ancapsu.herokuapp.com
 
 ---
 
-#### **Tipo Matéria**
+#### Tipo Matéria
 
 - <details>
     <summary><b>Query:</b></summary>
@@ -360,9 +356,9 @@ https://api-ancapsu.herokuapp.com
 
   </details>
 
-#### **Listar Matérias**
+#### Listar Artigos
 
-- **Options:**
+- Options:
 
   - `max=[integer]` - Quantidade de materias. default=12.
   - `ini=[integer]` - Inicio da lista de resultados, default=0.
@@ -403,9 +399,9 @@ https://api-ancapsu.herokuapp.com
 
   </details>
 
-#### **Listar Matérias por Categoria**
+#### Listar Artigos por Categoria
 
-- **Options:**
+- Options:
 
   - `categ=[string]` - "theory", "news", "comic", etc... obrigatório.
   - `max=[integer]` - Quantidade de materias. default=12.
@@ -447,9 +443,9 @@ https://api-ancapsu.herokuapp.com
 
   </details>
 
-#### **Buscar Matérias**
+#### Buscar Artigos
 
-- **Options:**
+- Options:
 
   - `search=[string]` - Conteudo da pesquisa, obrigatório.
   - `max=[integer]` - Quantidade de materias. default=12.
@@ -490,6 +486,15 @@ https://api-ancapsu.herokuapp.com
   ```
 
   </details>
+
+### Setup
+
+- Instale as dependências e inicie o servidor de desenvolvimento
+  ```bash
+  $ yarn -i
+  $ yarn serve
+  ```
+- Importe o arquivo insomnia.json no insomnia
 
 ---
 
