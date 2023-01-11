@@ -14,7 +14,7 @@
   "dependencies": {
     "apollo-server": "^3.5.0",
     "axios": "^0.24.0",
-    "class-validator": "^0.13.2",
+    "class-validator": "^0.14.0",
     "dotenv": "^10.0.0",
     "graphql": "^15.3.0",
     "reflect-metadata": "^0.1.13",
